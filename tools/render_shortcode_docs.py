@@ -67,6 +67,8 @@ for shortcode_fn in shortcodes:
     print(description)
     print(f"```\n{example}\n```")
     print("This example renders as:")
-    print("___")
+    # This shortcode surrounds the example output, making it easier to
+    # distinguish from the rest of the page.
+    print("{{< shortcode-example >}}")
     print(code)
-    print("___")
+    print("{{< /shortcode-example >}}")
