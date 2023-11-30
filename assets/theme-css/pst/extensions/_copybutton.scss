@@ -1,0 +1,38 @@
+// Copied from PyData Sphinx Theme's "_copybutton.scss".  This file is
+// intended to be copied and left unchanged.  The CSS properties are
+// then further modified as needed in "copybutton.local.css".
+
+/**
+ * Sphinx Copybutton
+ * ref: https://sphinx-copybutton.readthedocs.io/
+ */
+
+div.highlight button.copybtn {
+  // Nicer spacing
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  // Removes the button background so we more naturally blend with the code cell.
+  background-color: unset;
+
+  // Don't over-ride the success color
+  &:not(.success) {
+    color: var(--pst-color-muted);
+  }
+  border: none;
+  background-color: var(--pst-color-surface);
+
+  &:hover {
+    &:not(.success) {
+      color: var(--pst-color-text);
+      background-color: var(--pst-color-shadow);
+    }
+  }
+
+  // Tooltip styling
+  &.o-tooltip--left:after {
+    color: var(--pst-color-text);
+    background-color: var(--pst-color-surface);
+  }
+}
